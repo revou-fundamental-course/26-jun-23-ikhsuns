@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-Groceries</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+    /* CSS Grid styles */
+    .packages-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      align-items: center;
+      justify-items: center;
+      margin-top: 30px;
+      overflow: hidden;
+    }
+  
+    .packages-header {
+      text-align: center;
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+  
+    .packages-header.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  
+    .packages-header img {
+      width: 200px;
+    }
+  
+    .packages-header p {
+      text-align: center;
+    }
+  
+    /* Additional inline styles here if needed */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #03a1f0;
+    }
+
+    h1 {
+      color: #f3e7e7;
+      text-align: center;
+    }
+
+    h2 {
+      color: #151414;
+      text-align: center;
+    }
+
+    h3 {
+      color: #ffffff;
+      text-align: center;
+    }
+
+    p1 {
+      color: #0f0f0f;
+      text-align: right;
+    }
+
+    p2 {
+      color: #100f0f;
+      text-align: right;
+    }
+
+    #home {
+      background-image: url("img/banner.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+    }
+
+    /* Additional styles for navigation */
+    nav {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    nav ul li a:hover {
+      background-color: #555;
+    }
+
+    /* Additional styles for contact form */
+    form label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #0e0e0e;
+    }
+
+    /* Additional styles for other elements */
+    /* ... */
+    
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <h1>Top Rated E-Groceries Shop In Indonesian</h1>
+                         <h3>Every Day with best ingredients</h3>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#packages">Our Packages</a></li>
+        <li><a href="#contact">Call Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <!-- Banner Section Content -->
+  </section>
+  
+  <div style="text-align: center;">
+    <img src="sayur.jpg" width="400px">
+    <p style="text-align: center;">setiap hari beli sayur buah fresh disini</p>
+  </div>
+  
+  <div class="account">
+    <h3>Contact Us</h3>
+    <p align="center">Sales akan menghubungi anda 1x24 Jam setelah data kami terima.</p>
+  </div>
+
+  <section id="contact">
+    <!-- Contact Us Section Content -->
+    <form id="contactForm" onsubmit="validateForm(event)">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="interest">What Are You Interested In?:</label>
+      <select id="interest" name="interest" required>
+        <option value="">Select an option</option>
+        <option value="Fruits">Fresh Vegetables</option>
+        <option value="Vegetables">Fresh Fruit</option>
+        <option value="Dairy Products">Instant Delivery</option>
+        <option value="Meat and Seafood">Kitchen Ingredient</option>
+        <option value="Bakery">Kitchen Set</option>
+        <option value="Snacks">Bunding Set</option>
+        <option value="Others">Others</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section id="packages">
+    <!-- Our Packages Section Content -->
+    <div class="packages-header">
+        <h2>Our Packages</h2>
+        <p align="center">Berikut adalah sekumpulan paket yang tersedia.</p> 
+      </div>
+  </section>
+
+
+  <style>
+    /* CSS Grid styles */
+    .packages-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      align-items: center;
+      justify-items: center;
+      margin-top: 30px;
+    }
+  
+    .packages-header {
+      text-align: center;
+    }
+  
+    .packages-header img {
+      width: 200px;
+    }
+  
+    .packages-header p {
+      text-align: center;
+    }
+  </style>
+  
+  <section id="packages">
+    <div class="packages-container">
+      <div class="packages-header">
+        <h4>Fresh Vegetables</h4>
+        <img src="freshvegetables.jpg">
+        <p>Sayuran Segar Langsung dari sumber pertanian terbaik</p>
+      </div>
+  
+      <div class="packages-header">
+        <h4>Fresh Fruit</h4>
+        <img src="buah.jpg">
+        <p>Buah dengan kualitas terbaik dari local atau import dan harga yang menarik</p>
+      </div>
+  
+      <div class="packages-header">
+        <h4>Instant Delivery</h4>
+        <img src="ft.jpg">
+        <p>Di kirim instan oleh kurir yang telah di training dengan SOP untuk menjaga kondisi belanja kamu</p>
+      </div>
+  
+      <div class="packages-header">
+        <h4>Kitchen Ingredient</h4>
+        <img src="kit.jpg">
+        <p>Bumbu dapur lengkap untuk keperluan memasak kamu</p>
+      </div>
+  
+      <div class="packages-header">
+        <h4>Kitchen Set</h4>
+        <img src="set.jpg">
+        <p>Segala jenis alat masak untuk membantu kamu memasak</p>
+      </div>
+  
+      <div class="packages-header">
+        <h4>Bunding Set</h4>
+        <img src="what.jpg">
+        <p>Bingung masak apa? sudah tersedia paket untuk kamu masak di dapur kamu</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  <script src="js/script.js"></script>
+  <script>
+   const packagesHeaders = document.querySelectorAll('.packages-header');
+
+  let currentSlide = 0;
+  let slideInterval;
+
+  function showSlide(slideIndex) {
+  packagesHeaders.forEach(header => header.classList.remove('active'));
+  packagesHeaders[slideIndex].classList.add('active');
+  }
+
+  function validateForm(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Retrieve form inputs
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const phoneInput = document.getElementById('phone');
+  const interestInput = document.getElementById('interest');
+
+  // Validate name (required)
+  if (nameInput.value.trim() === '') {
+    alert('Please enter your name.');
+    nameInput.focus();
+    return;
+  }
+
+  // Validate email (required and valid format)
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (emailInput.value.trim() === '') {
+    alert('Please enter your email address.');
+    emailInput.focus();
+    return;
+  } else if (!emailPattern.test(emailInput.value.trim())) {
+    alert('Please enter a valid email address.');
+    emailInput.focus();
+    return;
+  }
+
+  // Validate phone number (required and numeric)
+  const phonePattern = /^\d+$/;
+  if (phoneInput.value.trim() === '') {
+    alert('Please enter your phone number.');
+    phoneInput.focus();
+    return;
+  } else if (!phonePattern.test(phoneInput.value.trim())) {
+    alert('Please enter a valid phone number.');
+    phoneInput.focus();
+    return;
+  }
+
+  // Validate interest (required)
+  if (interestInput.value === '') {
+    alert('Please select an interest.');
+    interestInput.focus();
+    return;
+  }
+
+  // If all validations pass, submit the form
+  alert('Form submitted successfully!');
+  document.getElementById('contactForm').reset(); // Reset form fields
+}
+
+  function nextSlide() {
+  currentSlide++;
+  if (currentSlide >= packagesHeaders.length) {
+    currentSlide = 0;
+  }
+  showSlide(currentSlide);
+  }
+
+  function showSlides() {
+  packagesHeaders.forEach((header, index) => {
+    setTimeout(() => {
+      header.classList.add('active');
+    }, index * 1000); // Adjust the duration (1000ms = 1 second) to control the delay between each slide appearance
+  });
+}
+
+// Show all slides once the page loads
+window.addEventListener('load', showSlides);
+
+  // Change slide every 3 seconds
+  slideInterval = setInterval(nextSlide, 7000)
+
+  </script>
+</body>
+</html>

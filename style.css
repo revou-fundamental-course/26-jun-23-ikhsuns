@@ -1,0 +1,113 @@
+/* CSS Grid styles */
+.packages-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+  justify-items: center;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.packages-header {
+  text-align: center;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.packages-header.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.packages-header img {
+  width: 200px;
+}
+
+.packages-header p {
+  text-align: center;
+}
+
+/* Additional inline styles here if needed */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #03a1f0;
+}
+
+h1 {
+  color: #f3e7e7;
+  text-align: center;
+}
+
+h2 {
+  color: #151414;
+  text-align: center;
+}
+
+h3 {
+  color: #ffffff;
+  text-align: center;
+}
+
+p1 {
+  color: #0f0f0f;
+  text-align: right;
+}
+
+p2 {
+  color: #100f0f;
+  text-align: right;
+}
+
+#home {
+  background-image: url("img/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+s
+/* Styles for navigation bar */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  
+}
+  nav ul li {
+    display: inline-block;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  /* Styles for sections */
+  section {
+    padding: 50px;
+  }
+  
+  /* Styles for contact form */
+  form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  form button {
+    padding: 10px 20px;
+  }
+  
+  /* Additional styles for responsiveness */
+  /* ... */
+  
+  
